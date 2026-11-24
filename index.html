@@ -362,19 +362,19 @@ Disponible només per a clients amb accés
 </div>
 </dl>
 </div>
-<form style="flex: 1 1 440px; min-width: 0; background: #F3F5FA; border-radius: 12px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<form id="contactForm" style="flex: 1 1 440px; min-width: 0; background: #F3F5FA; border-radius: 12px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="nom" style="font-size: 14px; font-weight: 600">Nom i cognoms</label>
-<input id="nom" type="text" autocomplete="name" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+<input id="nom" type="text" name="nom" required autocomplete="name" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 20px">
 <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
 <label for="telefon" style="font-size: 14px; font-weight: 600">Telèfon</label>
-<input id="telefon" type="tel" autocomplete="tel" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+<input id="telefon" type="tel" name="telefon" autocomplete="tel" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
 </div>
 <div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
 <label for="correu" style="font-size: 14px; font-weight: 600">Correu electrònic</label>
-<input id="correu" type="email" autocomplete="email" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+<input id="correu" type="email" name="correu" required autocomplete="email" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
@@ -388,10 +388,11 @@ Disponible només per a clients amb accés
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="missatge" style="font-size: 14px; font-weight: 600">Missatge</label>
-<textarea id="missatge" rows="4" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B; resize: vertical"></textarea>
+<textarea id="missatge" rows="4" name="missatge" required style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B; resize: vertical"></textarea>
 </div>
-<a href="mailto:boris-fab@fabimmo.com" id="send" style="font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px; align-self: flex-start">Enviï la consulta</a>
-<p style="font-size: 13px; color: #3E4C70">S'obrirà el seu correu amb el missatge preparat.</p>
+<input type="checkbox" id="botcheck" tabindex="-1" autocomplete="off" style="display: none">
+<button type="submit" id="send" style="font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 700; border: 0; cursor: pointer; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px; align-self: flex-start">Enviï la consulta</button>
+<p id="formStatus" role="status" aria-live="polite" style="font-size: 14px; color: #3E4C70; margin: 0"></p>
 </form>
 </div>
 </section>
@@ -434,13 +435,33 @@ $('menuBtn').addEventListener('click',function(){setMenu($('menuPanel').hidden)}
 document.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault()})});
-function updateMail(){
-  var g=function(i){return $(i).value};
-  var cos='Nom: '+g('nom')+'\nTelèfon: '+g('telefon')+'\nCorreu: '+g('correu')+'\nServei: '+g('servei')+'\n\n'+g('missatge');
-  $('send').href='mailto:boris-fab@fabimmo.com?subject='+encodeURIComponent('Consulta web: '+g('servei'))+'&body='+encodeURIComponent(cos);
-}
-['nom','telefon','correu','servei','missatge'].forEach(function(i){$(i).addEventListener('input',updateMail);$(i).addEventListener('change',updateMail)});
-updateMail();render('venda');render('lloguer');
+var WEB3FORMS_KEY='ba2afb10-fc47-41fe-a4f3-07c6c401b167';
+var cf=$('contactForm'),st=$('formStatus'),sb=$('send');
+cf.addEventListener('submit',function(e){
+  e.preventDefault();
+  if($('botcheck').checked)return;
+  sb.disabled=true;sb.style.opacity='.6';st.style.color='#3E4C70';st.textContent='Enviant…';
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      access_key:WEB3FORMS_KEY,
+      subject:'Consulta web: '+$('servei').value,
+      from_name:'Web FAB Serveis Immobiliaris',
+      name:$('nom').value,
+      phone:$('telefon').value,
+      email:$('correu').value,
+      servei:$('servei').value,
+      message:$('missatge').value
+    })
+  }).then(function(r){return r.json()}).then(function(d){
+    if(d&&d.success){cf.reset();st.style.color='#1E7A3E';st.textContent='Gràcies! Hem rebut la seva consulta i el tornarem a trucar aviat.'}
+    else{throw new Error()}
+  }).catch(function(){
+    st.style.color='#B3261E';st.textContent='No s\'ha pogut enviar. Pot trucar-nos al 650 369 778 o escriure a boris-fab@fabimmo.com.';
+  }).then(function(){sb.disabled=false;sb.style.opacity=''});
+});
+render('venda');render('lloguer');
 })();
 </script>
 </body>
