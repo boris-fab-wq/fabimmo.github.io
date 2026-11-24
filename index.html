@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAB Serveis Immobiliaris · Santa Coloma de Farners</title>
+<meta name="description" content="FAB Serveis Immobiliaris: venda i lloguer, administració de finques i administració de comunitats a Santa Coloma de Farners i Girona.">
+<meta name="theme-color" content="#13285B">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#13285B;background:#FFFFFF}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;margin:0}
+p{margin:0}
+a{color:#13285B}a:hover{color:#A8500C}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #E8832F;outline-offset:2px}
+
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div style="min-width: 0; background: #FFFFFF">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8F2">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#inici" style="display: block; line-height: 0">
+<img src="assets/logo.png" alt="FAB Serveis Immobiliaris, inici" style="height: 72px; width: auto; display: block">
+</a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+<a href="#serveis" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Serveis</a>
+<button type="button" aria-haspopup="true" id="menuBtn" aria-expanded="false" style="font-family: Inter, sans-serif; font-size: 15px; font-weight: 600; color: #13285B; background: none; border: 0; padding: 10px 0; cursor: pointer; display: flex; align-items: center; gap: 6px">Immobles
+<svg id="chevUp" hidden width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#13285B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"></path></svg>
+<svg id="chevDown" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#13285B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<a href="#per-que-fab" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Per què FAB</a>
+<a href="#qui-som" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Qui som</a>
+<a href="#com-treballem" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Com treballem</a>
+<a href="#contacte" style="font-size: 15px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 13px 22px; border-radius: 6px">Contacti'ns</a>
+</nav>
+</div>
+<div id="menuPanel" hidden style="background: #F3F5FA; border-top: 1px solid #E3E8F2">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #A8500C; margin-right: 8px">ELS NOSTRES IMMOBLES</span>
+<a href="#en-venda" data-close style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 12px 24px; border-radius: 6px">En venda</a>
+<a href="#en-lloguer" data-close style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 12px 24px; border-radius: 6px">En lloguer</a>
+</div>
+</div>
+</header>
+
+<section id="inici" style="background: #13285B; color: #FFFFFF; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 100%; height: auto; z-index: -1; color: #FFFFFF">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px 300px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 460px; max-width: 760px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #F2A25E">AGÈNCIA IMMOBILIÀRIA · SANTA COLOMA DE FARNERS</span>
+<h1 style="font-size: clamp(38px, 9vw, 56px); line-height: 1.08; font-weight: 800; color: #FFFFFF; overflow-wrap: break-word">Deixi les claus del seu immoble <span style="color: #E8832F">en bones mans</span></h1>
+<p style="font-size: 19px; line-height: 1.6; color: #D3DBEE; max-width: 560px">Un tracte proper, una gestió transparent i compromís amb el seu immoble.</p>
+<p style="font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 600; color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px">
+<span>Professionalitat</span><span aria-hidden="true" style="width: 7px; height: 7px; background: #E8832F"></span><span>Proximitat</span><span aria-hidden="true" style="width: 7px; height: 7px; background: #E8832F"></span><span>Transparència</span>
+</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 8px">
+<a href="#contacte" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Demani una valoració</a>
+<a href="#serveis" style="font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; border: 2px solid #FFFFFF; padding: 14px 26px; border-radius: 6px">Descobreixi els serveis</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="serveis" style="background: #F3F5FA; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; right: 0; bottom: 0; width: 760px; max-width: 70%; height: auto; z-index: -1; opacity: 0.25; color: #13285B">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES SERVEIS</span>
+<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">Com el podem <span style="color: #D9690F">ajudar?</span></h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px; max-width: 920px">
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 28px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; box-shadow: 0 1px 2px rgba(19,40,91,0.08)">
+<svg width="76" height="76" viewBox="0 0 64 64" fill="none" stroke="#E8832F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M6 32 32 10l26 22"></path><path d="M44 20v-8h6v14"></path><path d="M12 28v26h40V28"></path><path d="M26 54V38h12v16"></path></svg>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; border-left: 3px solid #E8832F; padding-left: 24px; overflow-wrap: anywhere">
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 700">Venda i lloguer</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">L'acompanyem en la valoració, promoció i gestió del seu immoble, des del primer contacte fins a la signatura.</p>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 28px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; box-shadow: 0 1px 2px rgba(19,40,91,0.08)">
+<svg width="76" height="76" viewBox="0 0 64 64" fill="none" stroke="#E8832F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 10h28l10 10v14"></path><path d="M12 10v40h20"></path><path d="M20 24h20M20 32h20M20 40h10"></path><path d="M34 46l10-8 10 8"></path><path d="M37 44v12h14V44"></path><path d="M42 56v-6h4v6"></path></svg>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; border-left: 3px solid #E8832F; padding-left: 24px; overflow-wrap: anywhere">
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 700">Administració de finques</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Gestionem el seu immoble de lloguer: seguiment de cobraments, incidències, manteniment i atenció als arrendataris.</p>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 28px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; box-shadow: 0 1px 2px rgba(19,40,91,0.08)">
+<svg width="76" height="76" viewBox="0 0 64 64" fill="none" stroke="#E8832F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="32" cy="18" r="8"></circle><path d="M18 54v-8a14 14 0 0 1 28 0v8z"></path><circle cx="12" cy="28" r="5"></circle><path d="M4 52v-4a8 8 0 0 1 8-8"></path><circle cx="52" cy="28" r="5"></circle><path d="M60 52v-4a8 8 0 0 0-8-8"></path></svg>
+<div style="flex: 1 1 240px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; border-left: 3px solid #E8832F; padding-left: 24px; overflow-wrap: anywhere">
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 700">Administració de comunitats</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Gestió econòmica i administrativa, seguiment d'incidències, manteniment i organització de juntes.</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="en-venda" style="background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES IMMOBLES</span>
+<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">En <span style="color: #D9690F">venda</span></h2>
+</div>
+<div id="vendaEmpty" style="border: 2px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; background: #F3F5FA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Properament publicarem aquí els immobles en venda</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Si busca alguna cosa en concret, truqui'ns o escrigui'ns i l'ajudarem a trobar-ho.</p>
+</div>
+<a href="#contacte" style="flex: none; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
+</div>
+<div id="vendaGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
+<template id="vendaTpl">
+<article style="flex: 1 1 300px; max-width: 384px; min-width: 0; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(19,40,91,0.2); display: flex; flex-direction: column">
+<img data-f="imatge" alt="" style="width: 100%; height: 220px; object-fit: cover; display: block; background: #E3E8F2">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px; overflow-wrap: anywhere">
+<span style="font-family: Montserrat, sans-serif; font-size: 26px; font-weight: 800" data-f="preu"></span>
+<h3 style="font-size: 18px; line-height: 1.3; font-weight: 700" data-f="titol"></h3>
+<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="poblacio"></p>
+<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="detalls"></p>
+<a href="#contacte" style="margin-top: 8px; font-size: 15px; font-weight: 700">Demani informació</a>
+</div>
+</article>
+</template>
+</div>
+</section>
+
+<section id="en-lloguer" style="background: #F3F5FA; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 640px; max-width: 70%; height: auto; z-index: -1; opacity: 0.22; color: #13285B; transform: scaleX(-1)">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES IMMOBLES</span>
+<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">En <span style="color: #D9690F">lloguer</span></h2>
+</div>
+<div id="lloguerEmpty" style="border: 2px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Properament publicarem aquí els immobles en lloguer</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Si busca alguna cosa en concret, truqui'ns o escrigui'ns i l'ajudarem a trobar-ho.</p>
+</div>
+<a href="#contacte" style="flex: none; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
+</div>
+<div id="lloguerGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
+<template id="lloguerTpl">
+<article style="flex: 1 1 300px; max-width: 384px; min-width: 0; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(19,40,91,0.2); display: flex; flex-direction: column">
+<img data-f="imatge" alt="" style="width: 100%; height: 220px; object-fit: cover; display: block; background: #E3E8F2">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px; overflow-wrap: anywhere">
+<span style="font-family: Montserrat, sans-serif; font-size: 26px; font-weight: 800" data-f="preu"></span>
+<h3 style="font-size: 18px; line-height: 1.3; font-weight: 700" data-f="titol"></h3>
+<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="poblacio"></p>
+<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="detalls"></p>
+<a href="#contacte" style="margin-top: 8px; font-size: 15px; font-weight: 700">Demani informació</a>
+</div>
+</article>
+</template>
+</div>
+</section>
+
+<section id="per-que-fab" style="background: #FFFFFF; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 760px; max-width: 70%; height: auto; z-index: -1; opacity: 0.22; color: #13285B; transform: scaleX(-1)">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 180px; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">PER QUÈ FAB</span>
+<h2 style="font-size: 40px; line-height: 1.15; font-weight: 700">Tres compromisos en cada gestió</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 40px 40px">
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 6px; background: #E8832F"></div>
+<h3 style="font-size: 24px; font-weight: 700; padding-top: 8px">Professionalitat</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Més de sis anys al sector ens permeten unir el coneixement del mercat immobiliari amb una gestió rigorosa d'immobles, finques i comunitats.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 6px; background: #E8832F"></div>
+<h3 style="font-size: 24px; font-weight: 700; padding-top: 8px">Proximitat</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Un tracte proper i directe, des de Santa Coloma de Farners, per resoldre els seus dubtes en cada pas.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 6px; background: #E8832F"></div>
+<h3 style="font-size: 24px; font-weight: 700; padding-top: 8px">Transparència</h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Una gestió clara: li expliquem cada pas i cada cost, sense sorpreses ni lletra petita.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="qui-som" style="background: #F3F5FA; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; right: 0; bottom: 0; width: 640px; max-width: 70%; height: auto; z-index: -1; opacity: 0.22; color: #13285B">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 64px">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 style="font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">QUI HI HA DARRERE DE FAB</h2>
+<p style="font-size: 18px; line-height: 1.7; color: #3E4C70">FAB és un projecte que neix amb més de sis anys d'experiència al sector immobiliari, desenvolupada a Santa Coloma de Farners i Girona. El nostre objectiu principal és facilitar-li totes les tramitacions vinculants al seu immoble, perquè pugui decidir amb tranquil·litat i seguretat.</p>
+<p style="font-size: 18px; line-height: 1.7; color: #3E4C70">Sóc en Boris i em caracteritzo per la capacitat d'anàlisi, la perseverància i la proximitat.</p>
+<p style="font-size: 20px; line-height: 1.6; font-weight: 600; color: #13285B">Si busca algú que l'acompanyi, el guiï i li proporcioni la millor solució, aquesta és la seva immobiliària.</p>
+<a href="#contacte" style="align-self: flex-start; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 14px 24px; border-radius: 6px; margin-top: 8px">Parlem-ne</a>
+</div>
+<div style="flex: 1 1 320px; max-width: 460px; min-width: 0; background: #13285B; border-radius: 12px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: Montserrat, sans-serif; font-size: 112px; font-weight: 800; line-height: 1; color: #E8832F">+6</span>
+<span style="font-size: 20px; font-weight: 600; line-height: 1.35; color: #FFFFFF">anys d'experiència al sector immobiliari</span>
+<div style="width: 100%; height: 2px; background: #E8832F; margin: 8px 0"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #F2A25E; overflow-wrap: anywhere"><span>SANTA COLOMA DE FARNERS</span><span>GIRONA</span></div>
+</div>
+</div>
+</section>
+
+<section id="com-treballem" style="background: #13285B; color: #FFFFFF; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; right: 0; bottom: 0; width: 900px; max-width: 80%; height: auto; z-index: -1; opacity: 0.3; color: #FFFFFF">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #F2A25E">COM TREBALLEM</span>
+<h2 style="font-size: 40px; line-height: 1.15; font-weight: 700; color: #FFFFFF">El seu immoble, pas a pas</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px">
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #E8832F; padding-top: 24px">
+<span style="font-family: Montserrat, sans-serif; font-size: 44px; font-weight: 800; color: #F2A25E; line-height: 1">01</span>
+<h3 style="font-size: 22px; font-weight: 700; color: #FFFFFF">Valoració i estratègia</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #D3DBEE">Analitzem l'immoble i el mercat de la zona per fixar un preu de sortida competitiu i realista, i definim l'estratègia que millor s'adapta al seu cas.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Estudi de mercat i preu de sortida</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Revisió de la documentació de l'immoble</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Pla de venda o lloguer a mida</li>
+</ul>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #E8832F; padding-top: 24px">
+<span style="font-family: Montserrat, sans-serif; font-size: 44px; font-weight: 800; color: #F2A25E; line-height: 1">02</span>
+<h3 style="font-size: 22px; font-weight: 700; color: #FFFFFF">Promoció i visites</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #D3DBEE">Preparem la presentació de l'immoble i el donem a conèixer als compradors o llogaters adequats, mantenint-lo informat en tot moment.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Presentació i difusió de l'immoble</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Selecció i filtratge d'interessats</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Coordinació de visites i seguiment</li>
+</ul>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #E8832F; padding-top: 24px">
+<span style="font-family: Montserrat, sans-serif; font-size: 44px; font-weight: 800; color: #F2A25E; line-height: 1">03</span>
+<h3 style="font-size: 22px; font-weight: 700; color: #FFFFFF">Negociació i signatura</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #D3DBEE">Negociem les condicions amb totes les parts i ens encarreguem de les tramitacions vinculants, des de la reserva fins a la signatura.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Negociació d'ofertes i condicions</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Revisió dels contractes i la documentació</li>
+<li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #FFFFFF"><span style="flex: none; width: 8px; height: 8px; background: #E8832F; margin-top: 7px"></span>Acompanyament en la signatura i en les gestions posteriors</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="comunitats" style="background: #F3F5FA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 32px; box-sizing: border-box">
+<article style="background: #FFFFFF; border-radius: 12px; padding: 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 48px; box-shadow: 0 1px 2px rgba(19,40,91,0.08)">
+<svg width="104" height="104" viewBox="0 0 64 64" fill="none" stroke="#E8832F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="32" cy="18" r="8"></circle><path d="M18 54v-8a14 14 0 0 1 28 0v8z"></path><circle cx="12" cy="28" r="5"></circle><path d="M4 52v-4a8 8 0 0 1 8-8"></path><circle cx="52" cy="28" r="5"></circle><path d="M60 52v-4a8 8 0 0 0-8-8"></path></svg>
+<div style="flex: 1 1 360px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px; border-left: 3px solid #E8832F; padding-left: 32px; overflow-wrap: anywhere">
+<h2 style="font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES SERVEIS · COMUNITATS</h2>
+<h3 style="font-size: 34px; line-height: 1.2; font-weight: 800">Administració de comunitats</h3>
+<p style="font-size: 18px; line-height: 1.65; color: #3E4C70">Gestionem la seva comunitat de propietaris amb dedicació, rigor i proximitat, perquè els veïns visquin tranquils i l'edifici estigui sempre ben cuidat.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 32px">
+<li style="flex: 1 1 240px; min-width: 0; display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.5"><span style="flex: none; width: 10px; height: 10px; background: #E8832F; margin-top: 7px"></span>Gestió econòmica i administrativa</li>
+<li style="flex: 1 1 240px; min-width: 0; display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.5"><span style="flex: none; width: 10px; height: 10px; background: #E8832F; margin-top: 7px"></span>Seguiment d'incidències</li>
+<li style="flex: 1 1 240px; min-width: 0; display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.5"><span style="flex: none; width: 10px; height: 10px; background: #E8832F; margin-top: 7px"></span>Manteniment de l'edifici</li>
+<li style="flex: 1 1 240px; min-width: 0; display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.5"><span style="flex: none; width: 10px; height: 10px; background: #E8832F; margin-top: 7px"></span>Organització de juntes</li>
+</ul>
+<a href="#contacte" style="align-self: flex-start; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px; margin-top: 6px">Sol·liciti una proposta</a>
+</div>
+</article>
+</div>
+</section>
+
+<section id="incidencies" style="background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px 56px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ÀREA DE CLIENTS · COMUNITATS</span>
+<h2 style="font-size: 40px; line-height: 1.15; font-weight: 700">Notifiqui una <span style="color: #D9690F">incidència</span></h2>
+</div>
+<p style="font-size: 18px; line-height: 1.65; color: #3E4C70">Si la seva comunitat forma part de la nostra cartera de clients, podrà informar-nos de qualsevol incidència directament des d'aquesta pàgina, amb el seu accés personal.</p>
+<div style="display: flex; align-items: center; gap: 14px; background: #13285B; color: #FFFFFF; border-radius: 10px; padding: 18px 22px; align-self: flex-start; max-width: 100%; box-sizing: border-box">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8832F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+<span style="font-size: 16px; font-weight: 600; line-height: 1.4">Servei exclusiu per a clients de FAB</span>
+</div>
+<p style="font-size: 16px; line-height: 1.6; color: #3E4C70">Encara no som els administradors de la seva comunitat? Estarem encantats d'explicar-li com treballem.</p>
+<a href="#contacte" style="align-self: flex-start; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Sol·liciti una proposta</a>
+</div>
+<form aria-label="Formulari d'incidències, disponible només per a clients" style="flex: 1 1 440px; min-width: 0; background: #F3F5FA; border: 1px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<p style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: #3E4C70">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8500C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+Disponible només per a clients amb accés
+</p>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="inc-comunitat" style="font-size: 14px; font-weight: 600; color: #3E4C70">Comunitat</label>
+<input id="inc-comunitat" type="text" disabled style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #C5CCDD; border-radius: 6px; background: #E9EDF5; color: #5B6787; cursor: not-allowed">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="inc-nom" style="font-size: 14px; font-weight: 600; color: #3E4C70">Nom i cognoms</label>
+<input id="inc-nom" type="text" disabled style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #C5CCDD; border-radius: 6px; background: #E9EDF5; color: #5B6787; cursor: not-allowed">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="inc-descripcio" style="font-size: 14px; font-weight: 600; color: #3E4C70">Descripció de la incidència</label>
+<textarea id="inc-descripcio" rows="4" disabled style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #C5CCDD; border-radius: 6px; background: #E9EDF5; color: #5B6787; resize: none; cursor: not-allowed"></textarea>
+</div>
+<button type="button" disabled style="font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 700; background: #C5CCDD; color: #3E4C70; border: 0; padding: 16px 28px; border-radius: 6px; cursor: not-allowed; align-self: flex-start">Enviï la incidència</button>
+</form>
+</div>
+</section>
+
+<section id="contacte" style="background: #FFFFFF; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 700px; max-width: 70%; height: auto; z-index: -1; opacity: 0.2; color: #13285B; transform: scaleX(-1)">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">CONTACTE</span>
+<h2 style="font-size: 40px; line-height: 1.15; font-weight: 700">Parlem del seu immoble</h2>
+<p style="font-size: 18px; line-height: 1.6; color: #3E4C70">Deixi'ns les seves dades i el tornarem a trucar. També ens pot trucar o escriure directament.</p>
+</div>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #A8500C">TELÈFON</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 600; display: flex; align-items: center; gap: 12px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8832F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>
+<a href="tel:650369778" style="text-decoration: none">650 369 778</a>
+</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #A8500C">CORREU ELECTRÒNIC</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 600; display: flex; align-items: center; gap: 12px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8832F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+<a href="mailto:boris-fab@fabimmo.com" style="text-decoration: none; overflow-wrap: anywhere">boris-fab@fabimmo.com</a>
+</dd>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<dt style="font-size: 13px; font-weight: 600; letter-spacing: 0.14em; color: #A8500C">HORARI</dt>
+<dd style="margin: 0; font-size: 19px; font-weight: 600; display: flex; align-items: center; gap: 12px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8832F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<span>Dilluns a divendres, de 09:00 a 18:00</span>
+</dd>
+</div>
+</dl>
+</div>
+<form style="flex: 1 1 440px; min-width: 0; background: #F3F5FA; border-radius: 12px; padding: 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="nom" style="font-size: 14px; font-weight: 600">Nom i cognoms</label>
+<input id="nom" type="text" autocomplete="name" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<label for="telefon" style="font-size: 14px; font-weight: 600">Telèfon</label>
+<input id="telefon" type="tel" autocomplete="tel" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+</div>
+<div style="flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<label for="correu" style="font-size: 14px; font-weight: 600">Correu electrònic</label>
+<input id="correu" type="email" autocomplete="email" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="servei" style="font-size: 14px; font-weight: 600">En què el podem ajudar?</label>
+<select id="servei" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B">
+<option>Venda o lloguer d'un immoble</option>
+<option>Administració de finques (lloguer)</option>
+<option>Administració de la meva comunitat</option>
+<option>Una altra consulta</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="missatge" style="font-size: 14px; font-weight: 600">Missatge</label>
+<textarea id="missatge" rows="4" style="width: 100%; box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; padding: 14px 16px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B; resize: vertical"></textarea>
+</div>
+<a href="mailto:boris-fab@fabimmo.com" id="send" style="font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px; align-self: flex-start">Enviï la consulta</a>
+<p style="font-size: 13px; color: #3E4C70">S'obrirà el seu correu amb el missatge preparat.</p>
+</form>
+</div>
+</section>
+
+<footer style="background: #13285B; color: #D3DBEE">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<img src="assets/logo-clar.png" alt="FAB Serveis Immobiliaris" style="height: 64px; width: auto; display: block">
+<nav aria-label="Peu de pàgina" style="display: flex; flex-wrap: wrap; gap: 8px 28px">
+<a href="#serveis" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Serveis</a>
+<a href="#en-venda" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En venda</a>
+<a href="#en-lloguer" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En lloguer</a>
+<a href="#per-que-fab" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Per què FAB</a>
+<a href="#qui-som" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Qui som</a>
+<a href="#contacte" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Contacte</a>
+</nav>
+<p style="font-size: 14px; color: #D3DBEE">© 2026 FAB Serveis Immobiliaris · Santa Coloma de Farners · fabimmo.com</p>
+</div>
+</footer>
+
+</div>
+<script>
+(function(){
+// Immobles: afegeixi elements amb { titol, poblacio, preu, detalls, imatge }
+var IMMOBLES={venda:[],lloguer:[]};
+var $=function(i){return document.getElementById(i)};
+function setMenu(o){$('menuPanel').hidden=!o;$('menuBtn').setAttribute('aria-expanded',o);$('chevUp').hidden=!o;$('chevDown').hidden=o}
+function render(nm){
+  var list=IMMOBLES[nm],grid=$(nm+'Grid'),tpl=$(nm+'Tpl');
+  $(nm+'Empty').hidden=list.length>0;grid.innerHTML='';
+  list.forEach(function(it){
+    var n=tpl.content.cloneNode(true);
+    n.querySelectorAll('[data-f]').forEach(function(e){
+      var k=e.getAttribute('data-f');
+      if(k==='imatge'){e.src=it.imatge||'';e.alt=it.titol||''}else e.textContent=it[k]||'';
+    });
+    grid.appendChild(n);
+  });
+}
+$('menuBtn').addEventListener('click',function(){setMenu($('menuPanel').hidden)});
+document.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault()})});
+function updateMail(){
+  var g=function(i){return $(i).value};
+  var cos='Nom: '+g('nom')+'\nTelèfon: '+g('telefon')+'\nCorreu: '+g('correu')+'\nServei: '+g('servei')+'\n\n'+g('missatge');
+  $('send').href='mailto:boris-fab@fabimmo.com?subject='+encodeURIComponent('Consulta web: '+g('servei'))+'&body='+encodeURIComponent(cos);
+}
+['nom','telefon','correu','servei','missatge'].forEach(function(i){$(i).addEventListener('input',updateMail);$(i).addEventListener('change',updateMail)});
+updateMail();render('venda');render('lloguer');
+})();
+</script>
+</body>
+</html>
