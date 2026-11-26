@@ -22,7 +22,13 @@ function fA(p){return [['Planta',p],['Superfície construïda','79,36 m²'],['Su
 function fB(p){return [['Planta',p],['Superfície construïda','79,30 m²'],['Superfície útil','63,84 m²'],['Saló-menjador','19,97 m²'],['Cuina','6,34 m²'],['Dormitoris','3'],['Banys','2'],['Terrassa','7,71 m²']]}
 function dA(n){return 'Es comercialitza el pis '+n+' de Residencial Salt III: 64,96 m² útils amb saló-menjador de 20,83 m² amb sortida a terrassa, cuina independent, 3 dormitoris i 2 banys.'}
 function dB(n){return 'Es comercialitza el pis '+n+' de Residencial Salt III: 63,84 m² útils amb saló-menjador de 19,97 m² amb sortida a terrassa, cuina independent, 3 dormitoris i 2 banys.'}
+var L='immobles/loft-santa-coloma/';
 var IMMOBLES={venda:[
+ {etiqueta:'LOFT REFORMAT',municipi:'Santa Coloma de Farners',titol:'Loft totalment reformat amb balcó',poblacio:'Santa Coloma de Farners (Girona)',preu:'87.000 €',
+  detalls:'Estudi · 1 bany · 1a planta · Balcó',
+  descripcio:'Es comercialitza un loft a la primera planta (sense ascensor), al costat de l\'estació d\'autobusos i a pocs minuts dels centres esportius i de les escoles. És un estudi totalment reformat: espai obert i lluminós amb sortida a balcó, cuina equipada amb placa d\'inducció, forn i microones, bany amb plat de dutxa, armari encastat, aire condicionat i safareig. A més, tota la instal·lació elèctrica de la comunitat és nova.',
+  fitxa:[['Tipus','Loft / estudi'],['Planta','1a (sense ascensor)'],['Estat','Totalment reformat'],['Banys','1'],['Cuina','Equipada (inducció, forn i microones)'],['Climatització','Aire condicionat'],['Aigua calenta','Termo elèctric'],['Exterior','Balcó'],['Instal·lació elèctrica comunitat','Nova']],
+  fotos:[[L+'sala-balco.jpg','Espai principal amb sortida al balcó'],[L+'sala-cuina.jpg','Espai obert amb cuina'],[L+'sala-passadis.jpg','Vista general del loft'],[L+'cuina.jpg','Cuina equipada'],[L+'cuina-2.jpg','Cuina i sortida al balcó'],[L+'cuina-armari.jpg','Cuina i armari encastat'],[L+'bany.jpg','Bany'],[L+'balco.jpg','Balcó'],[L+'balco-2.jpg','Balcó'],[L+'safareig.jpg','Safareig amb termo elèctric']]},
  pis({titol:'Planta baixa A amb pati de 112 m²',preu:'220.500 €',detalls:'3 hab. · 2 banys · 62,73 m² útils · Pati 112,84 m²',
   desc:'Es comercialitza l\'habitatge de planta baixa A de Residencial Salt III: 62,73 m² útils amb 3 dormitoris, 2 banys i un pati privat de 112,84 m².',
   fitxa:[['Planta','Baixa'],['Superfície construïda','79,30 m²'],['Superfície útil','62,73 m²'],['Dormitoris','3'],['Banys','2'],['Pati privat','112,84 m²']],
