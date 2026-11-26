@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Immobles en venda i lloguer · FAB Serveis Immobiliaris</title>
+<meta name="description" content="Pisos, dúplex i locals en venda i lloguer de FAB Serveis Immobiliaris. Filtri per població i consulti fotos, plànols i preus.">
+<meta name="theme-color" content="#13285B">
+<link rel="icon" type="image/png" href="logo-web.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#13285B;background:#FFFFFF}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;margin:0}
+p{margin:0}
+a{color:#13285B}a:hover{color:#A8500C}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #E8832F;outline-offset:2px}
+
+[hidden]{display:none!important}
+</style>
+<link rel="stylesheet" href="immobles.css">
+</head>
+<body>
+<div style="min-width: 0; background: #FFFFFF">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8F2">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html#inici" style="display: block; line-height: 0">
+<img src="logo-web.png" alt="FAB Serveis Immobiliaris, inici" style="height: 72px; width: auto; display: block">
+</a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+<a href="index.html#serveis" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Serveis</a>
+<button type="button" aria-haspopup="true" id="menuBtn" aria-expanded="false" style="font-family: Inter, sans-serif; font-size: 15px; font-weight: 600; color: #13285B; background: none; border: 0; padding: 10px 0; cursor: pointer; display: flex; align-items: center; gap: 6px">Immobles
+<svg id="chevUp" hidden width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#13285B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"></path></svg>
+<svg id="chevDown" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#13285B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<a href="index.html#per-que-fab" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Per què FAB</a>
+<a href="index.html#qui-som" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Qui som</a>
+<a href="index.html#com-treballem" style="font-size: 15px; font-weight: 600; text-decoration: none; padding: 10px 0">Com treballem</a>
+<a href="index.html#contacte" style="font-size: 15px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 13px 22px; border-radius: 6px">Contacti'ns</a>
+</nav>
+</div>
+<div id="menuPanel" hidden style="background: #F3F5FA; border-top: 1px solid #E3E8F2">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #A8500C; margin-right: 8px">ELS NOSTRES IMMOBLES</span>
+<a href="immobles.html?op=venda" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 12px 24px; border-radius: 6px">En venda</a>
+<a href="immobles.html?op=lloguer" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 12px 24px; border-radius: 6px">En lloguer</a>
+</div>
+</div>
+</header>
+
+<main>
+<section style="background: #13285B; color: #FFFFFF; position: relative; overflow: hidden; z-index: 0">
+<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; right: 0; bottom: 0; width: 720px; max-width: 80%; height: auto; z-index: -1; opacity: 0.5">
+<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
+<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"></path>
+</svg>
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 72px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #F2A25E">ELS NOSTRES IMMOBLES</span>
+<h1 id="pTitol" style="font-size: 48px; line-height: 1.1; font-weight: 800">Immobles en <span style="color: #E8832F">venda</span></h1>
+<p id="pSub" style="font-size: 18px; line-height: 1.6; color: #D3DBEE; max-width: 640px">Triï l'operació i la població per veure els immobles disponibles, amb fotos, plànols i preu.</p>
+</div>
+</section>
+
+<section id="pFiltres" style="background: #F3F5FA; border-bottom: 1px solid #E3E8F2; position: sticky; top: 0; z-index: 5">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div role="tablist" aria-label="Operació" style="display: flex; gap: 8px; background: #FFFFFF; padding: 6px; border-radius: 8px; box-shadow: 0 1px 3px rgba(19,40,91,0.15)">
+<button type="button" role="tab" class="op-tab" data-op="venda" aria-selected="true">En venda <span></span></button>
+<button type="button" role="tab" class="op-tab" data-op="lloguer" aria-selected="false">En lloguer <span></span></button>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600">Població
+<select id="fPob" style="font-family: Inter, sans-serif; font-size: 16px; padding: 12px 14px; border: 1px solid #7B88A8; border-radius: 6px; background: #FFFFFF; color: #13285B; min-width: 220px"></select>
+</label>
+</div>
+</section>
+
+<section style="background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<p id="pCount" role="status" aria-live="polite" style="font-size: 16px; font-weight: 600; color: #3E4C70"></p>
+<div id="pGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
+<div id="pEmpty" hidden style="border: 2px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; background: #F3F5FA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h3 id="pEmptyT" style="font-size: 22px; line-height: 1.25; font-weight: 700"></h3>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Si busca alguna cosa en concret, truqui'ns o escrigui'ns i l'ajudarem a trobar-ho.</p>
+</div>
+<a href="index.html#contacte" style="flex: none; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
+</div>
+</div>
+</section>
+
+<section style="background: #F3F5FA">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h2 style="font-size: 30px; line-height: 1.2; font-weight: 800">Vol vendre o llogar el seu immoble?</h2>
+<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Deixi les claus del seu immoble en bones mans. Li preparem un pla a mida, sense compromís.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="index.html#contacte" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
+<a href="tel:+34650369778" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #FFFFFF; color: #13285B; border: 2px solid #13285B; padding: 14px 26px; border-radius: 6px">650 369 778</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer style="background: #13285B; color: #D3DBEE">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<img src="logo-web-clar.png" alt="FAB Serveis Immobiliaris" style="height: 64px; width: auto; display: block">
+<nav aria-label="Peu de pàgina" style="display: flex; flex-wrap: wrap; gap: 8px 28px">
+<a href="index.html#serveis" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Serveis</a>
+<a href="immobles.html?op=venda" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En venda</a>
+<a href="immobles.html?op=lloguer" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En lloguer</a>
+<a href="index.html#per-que-fab" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Per què FAB</a>
+<a href="index.html#qui-som" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Qui som</a>
+<a href="index.html#contacte" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Contacte</a>
+</nav>
+<p style="font-size: 14px; color: #D3DBEE">© 2026 FAB Serveis Immobiliaris · Santa Coloma de Farners · fabimmo.com</p>
+</div>
+</footer>
+
+</div>
+<style>
+.op-tab{font-family:Inter,sans-serif;font-size:16px;font-weight:700;border:0;border-radius:6px;padding:12px 20px;cursor:pointer;background:transparent;color:#13285B}
+.op-tab[aria-selected="true"]{background:#13285B;color:#FFFFFF}
+.op-tab span{font-weight:500;opacity:.8}
+@media (max-width:640px){#pTitol{font-size:36px!important}#pFiltres{position:static!important}}
+</style>
+<script src="immobles.js"></script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+// menú Immobles de la capçalera
+function setMenu(o){$('menuPanel').hidden=!o;$('menuBtn').setAttribute('aria-expanded',o);$('chevUp').hidden=!o;$('chevDown').hidden=o}
+$('menuBtn').addEventListener('click',function(){setMenu($('menuPanel').hidden)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+var IM=window.FAB.IMMOBLES,NOM={venda:'venda',lloguer:'lloguer'};
+var p=new URLSearchParams(location.search);
+var st={op:p.get('op')==='lloguer'?'lloguer':'venda',pob:p.get('poblacio')||''};
+function pobs(op){var c={};IM[op].forEach(function(it){var m=it.municipi||'Altres';c[m]=(c[m]||0)+1});return c}
+function draw(push){
+  var list=IM[st.op],c=pobs(st.op),sel=$('fPob');
+  if(st.pob&&!c[st.pob])st.pob='';
+  sel.innerHTML='<option value="">Totes les poblacions ('+list.length+')</option>'+Object.keys(c).sort().map(function(m){return '<option value="'+m.replace(/"/g,'&quot;')+'">'+m+' ('+c[m]+')</option>'}).join('');
+  sel.value=st.pob;
+  document.querySelectorAll('.op-tab').forEach(function(t){var o=t.getAttribute('data-op');t.setAttribute('aria-selected',o===st.op);t.querySelector('span').textContent='('+IM[o].length+')'});
+  var f=list.filter(function(it){return !st.pob||(it.municipi||'Altres')===st.pob});
+  $('pTitol').innerHTML='Immobles en <span style="color: #E8832F">'+NOM[st.op]+'</span>'+(st.pob?' a '+st.pob.replace(/</g,''):'');
+  var g=$('pGrid');g.innerHTML='';f.forEach(function(it){g.appendChild(window.FAB.card(it))});
+  $('pCount').textContent=f.length?f.length+(f.length===1?' immoble':' immobles')+(st.pob?' a '+st.pob:''):'';
+  $('pEmpty').hidden=f.length>0;$('pEmptyT').textContent='Properament publicarem aquí els immobles en '+NOM[st.op];
+  document.title='Immobles en '+NOM[st.op]+(st.pob?' a '+st.pob:'')+' · FAB Serveis Immobiliaris';
+  var q='?op='+st.op+(st.pob?'&poblacio='+encodeURIComponent(st.pob):'');
+  if(push)history.replaceState(null,'',q);
+}
+document.querySelectorAll('.op-tab').forEach(function(t){t.addEventListener('click',function(){st.op=t.getAttribute('data-op');st.pob='';draw(true)})});
+$('fPob').addEventListener('change',function(){st.pob=this.value;draw(true)});
+draw(false);
+})();
+</script>
+</body>
+</html>

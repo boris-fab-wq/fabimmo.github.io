@@ -18,22 +18,8 @@ a{color:#13285B}a:hover{color:#A8500C}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #E8832F;outline-offset:2px}
 
 [hidden]{display:none!important}
-.im-photo img{transition:transform .3s}.im-photo:hover img{transform:scale(1.03)}.im-photo{overflow:hidden}
-#imModal{position:fixed;inset:0;z-index:1000;background:rgba(10,20,46,.88);display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box}
-#imBox{background:#FFFFFF;border-radius:12px;max-width:1100px;width:100%;max-height:100%;overflow:auto;display:flex;flex-wrap:wrap}
-#imGal{flex:1 1 560px;min-width:0;background:#0F1F47;position:relative;display:flex;flex-direction:column}
-#imMain{width:100%;height:min(62vh,560px);object-fit:contain;display:block;background:#0F1F47}
-.imNav{position:absolute;top:calc(min(62vh,560px)/2 - 24px);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#13285B;font-size:26px;line-height:1;cursor:pointer}
-#imThumbs{display:flex;gap:8px;overflow-x:auto;padding:10px}
-#imThumbs button{flex:none;padding:0;border:2px solid transparent;border-radius:4px;background:none;cursor:pointer;opacity:.6}
-#imThumbs button[aria-current="true"]{border-color:#E8832F;opacity:1}
-#imThumbs img{width:84px;height:56px;object-fit:cover;display:block;border-radius:2px}
-#imInfo{flex:1 1 340px;min-width:0;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px}
-#imFitxa{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-#imFitxa li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #E3E8F2;font-size:15px}
-#imFitxa li span:last-child{font-weight:600}
-@media (max-width:640px){#imClose{position:fixed;top:24px;right:24px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3)}#imMain{height:46vh}.imNav{top:calc(23vh - 24px)}#imInfo{padding:20px}}
 </style>
+<link rel="stylesheet" href="immobles.css">
 </head>
 <body>
 <div style="min-width: 0; background: #FFFFFF">
@@ -58,8 +44,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 <div id="menuPanel" hidden style="background: #F3F5FA; border-top: 1px solid #E3E8F2">
 <div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #A8500C; margin-right: 8px">ELS NOSTRES IMMOBLES</span>
-<a href="#en-venda" data-close style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 12px 24px; border-radius: 6px">En venda</a>
-<a href="#en-lloguer" data-close style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 12px 24px; border-radius: 6px">En lloguer</a>
+<a href="immobles.html?op=venda" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 12px 24px; border-radius: 6px">En venda</a>
+<a href="immobles.html?op=lloguer" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 12px 24px; border-radius: 6px">En lloguer</a>
 </div>
 </div>
 </header>
@@ -125,72 +111,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 </div>
 </section>
 
-<section id="en-venda" style="background: #FFFFFF">
+<section id="immobles" style="background: #FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES IMMOBLES</span>
-<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">En <span style="color: #D9690F">venda</span></h2>
+<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">Immobles <span style="color: #D9690F">destacats</span></h2>
 </div>
-<div id="vendaEmpty" style="border: 2px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; background: #F3F5FA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Properament publicarem aquí els immobles en venda</h3>
-<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Si busca alguna cosa en concret, truqui'ns o escrigui'ns i l'ajudarem a trobar-ho.</p>
-</div>
-<a href="#contacte" style="flex: none; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
-</div>
-<div id="vendaGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
-<template id="vendaTpl">
-<article style="flex: 1 1 300px; max-width: 384px; min-width: 0; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(19,40,91,0.2); display: flex; flex-direction: column">
-<button type="button" data-open class="im-photo" style="position: relative; padding: 0; border: 0; background: #E3E8F2; cursor: pointer; display: block; width: 100%">
-<img data-f="imatge" alt="" loading="lazy" style="width: 100%; height: 220px; object-fit: cover; display: block">
-<span data-f="etiqueta" style="position: absolute; left: 12px; top: 12px; background: #13285B; color: #FFFFFF; font-family: Inter, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; padding: 6px 10px; border-radius: 4px"></span>
-<span data-f="nfotos" style="position: absolute; right: 12px; bottom: 12px; background: rgba(19,40,91,0.85); color: #FFFFFF; font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 4px"></span>
-</button>
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px; overflow-wrap: anywhere; flex: 1">
-<span style="font-family: Montserrat, sans-serif; font-size: 26px; font-weight: 800" data-f="preu"></span>
-<h3 style="font-size: 18px; line-height: 1.3; font-weight: 700" data-f="titol"></h3>
-<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="poblacio"></p>
-<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="detalls"></p>
-<div style="margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 20px">
-<button type="button" data-open style="font-family: Inter, sans-serif; font-size: 15px; font-weight: 700; color: #13285B; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline">Veure fotos i detalls</button>
-<a href="#contacte" data-info style="font-size: 15px; font-weight: 700">Demani informació</a>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="immobles.html?op=venda" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #13285B; color: #FFFFFF; padding: 14px 24px; border-radius: 6px">En venda <span id="nVenda"></span></a>
+<a href="immobles.html?op=lloguer" style="font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 14px 24px; border-radius: 6px">En lloguer <span id="nLloguer"></span></a>
 </div>
 </div>
-</article>
-</template>
-</div>
-</section>
-
-<section id="en-lloguer" style="background: #F3F5FA; position: relative; overflow: hidden; z-index: 0">
-<svg viewBox="0 0 1560 360" aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 640px; max-width: 70%; height: auto; z-index: -1; opacity: 0.22; color: #13285B; transform: scaleX(-1)">
-<path d="M0 235 L740 77 V360 M608 360 V145 L875 216 V360 M1250 360 V118 L1355 88 V360 M1355 205 L1559 142" fill="none" stroke="#E8832F" stroke-width="6" stroke-linejoin="round"></path>
-<path d="M797 360 V133 L1080 203 V360 M1080 258 L1208 222 M1208 360 V3 L1425 75 V360 M1355 208 L1559 258" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"></path>
-</svg>
-<div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #A8500C">ELS NOSTRES IMMOBLES</span>
-<h2 style="font-size: 44px; line-height: 1.15; font-weight: 800">En <span style="color: #D9690F">lloguer</span></h2>
-</div>
-<div id="lloguerEmpty" style="border: 2px dashed #7B88A8; border-radius: 12px; padding: 40px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
-<h3 style="font-size: 22px; line-height: 1.25; font-weight: 700">Properament publicarem aquí els immobles en lloguer</h3>
-<p style="font-size: 17px; line-height: 1.6; color: #3E4C70">Si busca alguna cosa en concret, truqui'ns o escrigui'ns i l'ajudarem a trobar-ho.</p>
-</div>
-<a href="#contacte" style="flex: none; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 16px 28px; border-radius: 6px">Contacti'ns</a>
-</div>
-<div id="lloguerGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
-<template id="lloguerTpl">
-<article style="flex: 1 1 300px; max-width: 384px; min-width: 0; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(19,40,91,0.2); display: flex; flex-direction: column">
-<img data-f="imatge" alt="" style="width: 100%; height: 220px; object-fit: cover; display: block; background: #E3E8F2">
-<div style="padding: 24px; display: flex; flex-direction: column; gap: 8px; overflow-wrap: anywhere">
-<span style="font-family: Montserrat, sans-serif; font-size: 26px; font-weight: 800" data-f="preu"></span>
-<h3 style="font-size: 18px; line-height: 1.3; font-weight: 700" data-f="titol"></h3>
-<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="poblacio"></p>
-<p style="font-size: 15px; line-height: 1.5; color: #3E4C70" data-f="detalls"></p>
-<a href="#contacte" style="margin-top: 8px; font-size: 15px; font-weight: 700">Demani informació</a>
-</div>
-</article>
-</template>
+<div id="destacatsGrid" style="display: flex; flex-wrap: wrap; gap: 28px"></div>
+<a href="immobles.html?op=venda" style="align-self: center; font-size: 16px; font-weight: 700">Veure tots els immobles →</a>
 </div>
 </section>
 
@@ -424,8 +358,8 @@ Disponible només per a clients amb accés
 <img src="logo-web-clar.png" alt="FAB Serveis Immobiliaris" style="height: 64px; width: auto; display: block">
 <nav aria-label="Peu de pàgina" style="display: flex; flex-wrap: wrap; gap: 8px 28px">
 <a href="#serveis" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Serveis</a>
-<a href="#en-venda" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En venda</a>
-<a href="#en-lloguer" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En lloguer</a>
+<a href="immobles.html?op=venda" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En venda</a>
+<a href="immobles.html?op=lloguer" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">En lloguer</a>
 <a href="#per-que-fab" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Per què FAB</a>
 <a href="#qui-som" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Qui som</a>
 <a href="#contacte" style="font-size: 15px; color: #FFFFFF; text-decoration: none; padding: 8px 0">Contacte</a>
@@ -435,134 +369,11 @@ Disponible només per a clients amb accés
 </footer>
 
 </div>
-<div id="imModal" hidden role="dialog" aria-modal="true" aria-labelledby="imTitol">
-<div id="imBox">
-<div id="imGal">
-<img id="imMain" alt="">
-<button type="button" class="imNav" id="imPrev" aria-label="Foto anterior" style="left: 12px">‹</button>
-<button type="button" class="imNav" id="imNext" aria-label="Foto següent" style="right: 12px">›</button>
-<span id="imCount" style="position: absolute; left: 12px; top: 12px; background: rgba(19,40,91,0.85); color: #FFFFFF; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 4px"></span>
-<p id="imCaption" style="color: #D3DBEE; font-size: 13px; padding: 10px 12px 0"></p>
-<div id="imThumbs"></div>
-</div>
-<div id="imInfo">
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
-<span id="imEtiqueta" style="font-size: 13px; font-weight: 600; letter-spacing: 0.18em; color: #A8500C"></span>
-<button type="button" id="imClose" aria-label="Tancar" style="border: 0; background: #F3F5FA; color: #13285B; width: 40px; height: 40px; border-radius: 50%; font-size: 22px; line-height: 1; cursor: pointer; flex: none">×</button>
-</div>
-<span id="imPreu" style="font-family: Montserrat, sans-serif; font-size: 32px; font-weight: 800"></span>
-<h3 id="imTitol" style="font-size: 22px; line-height: 1.25; font-weight: 700"></h3>
-<p id="imPoblacio" style="font-size: 15px; color: #3E4C70"></p>
-<p id="imDesc" style="font-size: 16px; line-height: 1.6; color: #3E4C70"></p>
-<ul id="imFitxa"></ul>
-<p style="font-size: 13px; color: #7B88A8">Imatges orientatives, no contractuals.</p>
-<a href="#contacte" id="imInfoBtn" style="align-self: flex-start; font-family: Montserrat, sans-serif; font-size: 16px; font-weight: 700; text-decoration: none; background: #E8832F; color: #13285B; padding: 14px 26px; border-radius: 6px">Demani informació</a>
-</div>
-</div>
-</div>
+<script src="immobles.js"></script>
 <script>
 (function(){
-// Immobles: { etiqueta, titol, poblacio, preu, detalls, descripcio, fitxa:[[nom,valor]], fotos:[[fitxer,peu]] }
-// La primera foto és la portada (diferent a cada anunci); la segona, el plànol del pis.
-var D='immobles/salt-iii/';
-var ADR='C/ Àngel Guimerà 116 · Salt (Girona)';
-var EDIF=' Edifici de reforma integral amb ascensor, a 9 minuts en cotxe del centre de Girona i a 3 minuts de l\'AP-7 i l\'A-2.';
-var F={
- facDia:[D+'facana-dia.jpg','Façana de l\'edifici'],facNit:[D+'facana-nit.jpg','Façana al vespre'],
- salo:[D+'salo-menjador.jpg','Saló-menjador'],cuina:[D+'cuina.jpg','Cuina'],dorm:[D+'dormitori.jpg','Dormitori'],
- atic:[D+'atic-terrassa.jpg','Terrassa de l\'àtic'],seccio:[D+'seccio-edifici.jpg','Secció de l\'edifici'],
- tipus:[D+'planta-tipus.jpg','Planta tipus (plantes 1a a 3a)'],zenital:[D+'vista-zenital.jpg','Vista zenital d\'una planta tipus'],
- ubic:[D+'ubicacio.jpg','Ubicació: C/ Àngel Guimerà 116, Salt']
-};
-function pis(o){
-  var g=[o.portada,o.planol].concat(o.extra||[]);
-  [F.salo,F.cuina,F.dorm,F.facDia,F.ubic].forEach(function(f){if(g.indexOf(f)<0)g.push(f)});
-  return {etiqueta:'RESIDENCIAL SALT III',titol:o.titol,poblacio:ADR,preu:o.preu,detalls:o.detalls,descripcio:o.desc+EDIF,fitxa:o.fitxa,fotos:g};
-}
-var tA=[D+'tipus-a-planol.jpg','Plànol de l\'habitatge A (plantes 1a a 3a)'],t3A=[D+'tipus-a-3d.jpg','Vista 3D de l\'habitatge A'];
-var tB=[D+'tipus-b-planol.jpg','Plànol de l\'habitatge B (plantes 1a a 3a)'],t3B=[D+'tipus-b-3d.jpg','Vista 3D de l\'habitatge B'];
-function fA(p){return [['Planta',p],['Superfície construïda','79,36 m²'],['Superfície útil','64,96 m²'],['Saló-menjador','20,83 m²'],['Cuina','6,53 m²'],['Dormitoris','3'],['Banys','2'],['Terrassa','7,70 m²']]}
-function fB(p){return [['Planta',p],['Superfície construïda','79,30 m²'],['Superfície útil','63,84 m²'],['Saló-menjador','19,97 m²'],['Cuina','6,34 m²'],['Dormitoris','3'],['Banys','2'],['Terrassa','7,71 m²']]}
-function dA(n){return 'Es comercialitza el pis '+n+' de Residencial Salt III: 64,96 m² útils amb saló-menjador de 20,83 m² amb sortida a terrassa, cuina independent, 3 dormitoris i 2 banys.'}
-function dB(n){return 'Es comercialitza el pis '+n+' de Residencial Salt III: 63,84 m² útils amb saló-menjador de 19,97 m² amb sortida a terrassa, cuina independent, 3 dormitoris i 2 banys.'}
-var IMMOBLES={venda:[
- pis({titol:'Planta baixa A amb pati de 112 m²',preu:'220.500 €',detalls:'3 hab. · 2 banys · 62,73 m² útils · Pati 112,84 m²',
-  desc:'Es comercialitza l\'habitatge de planta baixa A de Residencial Salt III: 62,73 m² útils amb 3 dormitoris, 2 banys i un pati privat de 112,84 m².',
-  fitxa:[['Planta','Baixa'],['Superfície construïda','79,30 m²'],['Superfície útil','62,73 m²'],['Dormitoris','3'],['Banys','2'],['Pati privat','112,84 m²']],
-  portada:F.facDia,planol:[D+'pb-a-planol.jpg','Plànol de l\'habitatge de planta baixa A'],extra:[[D+'pb-a-3d.jpg','Vista 3D de l\'habitatge de planta baixa A'],F.facNit]}),
- pis({titol:'Pis 1r A amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 64,96 m² útils · Terrassa 7,70 m²',desc:dA('1r A'),fitxa:fA('1a'),portada:F.salo,planol:tA,extra:[t3A]}),
- pis({titol:'Pis 1r B amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 63,84 m² útils · Terrassa 7,71 m²',desc:dB('1r B'),fitxa:fB('1a'),portada:F.cuina,planol:tB,extra:[t3B]}),
- pis({titol:'Pis 2n A amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 64,96 m² útils · Terrassa 7,70 m²',desc:dA('2n A'),fitxa:fA('2a'),portada:F.dorm,planol:tA,extra:[t3A]}),
- pis({titol:'Pis 2n B amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 63,84 m² útils · Terrassa 7,71 m²',desc:dB('2n B'),fitxa:fB('2a'),portada:t3B,planol:tB}),
- pis({titol:'Pis 3r A amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 64,96 m² útils · Terrassa 7,70 m²',desc:dA('3r A'),fitxa:fA('3a'),portada:F.tipus,planol:tA,extra:[t3A]}),
- pis({titol:'Pis 3r B amb terrassa',preu:'199.500 €',detalls:'3 hab. · 2 banys · 63,84 m² útils · Terrassa 7,71 m²',desc:dB('3r B'),fitxa:fB('3a'),portada:F.zenital,planol:tB,extra:[t3B]}),
- pis({titol:'Dúplex àtic 4t A amb terrassa de 39 m²',preu:'220.500 €',detalls:'2 hab. · 2 banys · 86,65 m² útils · Terrassa 39,16 m²',
-  desc:'Es comercialitza el dúplex àtic 4t A de Residencial Salt III: 86,65 m² útils en dues plantes (altell de 21,77 m² útils inclòs), 2 dormitoris, 2 banys i una terrassa de 39,16 m².',
-  fitxa:[['Planta','4a + altell'],['Superfície útil total','86,65 m²'],['Altell (útil)','21,77 m²'],['Altell (construït)','32,39 m²'],['Dormitoris','2'],['Banys','2'],['Terrassa','39,16 m²']],
-  portada:F.atic,planol:[D+'4a-planol.jpg','Plànol de la planta 4a (dúplex 4t A)'],extra:[[D+'4a-altell.jpg','Plànol de l\'altell (dúplex 4t A)'],[D+'4a-3d.jpg','Vista 3D del dúplex 4t A'],F.seccio]}),
- pis({titol:'Dúplex àtic 4t B amb terrassa de 39 m²',preu:'220.500 €',detalls:'2 hab. · 2 banys · 85,68 m² útils · Terrassa 39,24 m²',
-  desc:'Es comercialitza el dúplex àtic 4t B de Residencial Salt III: 85,68 m² útils en dues plantes (altell de 22,01 m² útils inclòs), 2 dormitoris, 2 banys i una terrassa de 39,24 m².',
-  fitxa:[['Planta','4a + altell'],['Superfície útil total','85,68 m²'],['Altell (útil)','22,01 m²'],['Altell (construït)','32,36 m²'],['Dormitoris','2'],['Banys','2'],['Terrassa','39,24 m²']],
-  portada:F.seccio,planol:[D+'4b-planol.jpg','Plànol de la planta 4a (dúplex 4t B)'],extra:[[D+'4b-altell.jpg','Plànol de l\'altell (dúplex 4t B)'],[D+'4b-3d.jpg','Vista 3D del dúplex 4t B'],F.atic]}),
- {etiqueta:'RESIDENCIAL SALT III',titol:'Local comercial a peu de carrer',poblacio:ADR,preu:'63.000 €',detalls:'Planta baixa · 20 m² construïts',
-  descripcio:'Es comercialitza el local comercial de planta baixa de Residencial Salt III: 20 m² construïts a peu de carrer.'+EDIF,
-  fitxa:[['Planta','Baixa'],['Superfície construïda','20 m²']],fotos:[F.facNit,F.facDia,F.ubic]}
-],lloguer:[]};
 var $=function(i){return document.getElementById(i)};
 function setMenu(o){$('menuPanel').hidden=!o;$('menuBtn').setAttribute('aria-expanded',o);$('chevUp').hidden=!o;$('chevDown').hidden=o}
-function render(nm){
-  var list=IMMOBLES[nm],grid=$(nm+'Grid'),tpl=$(nm+'Tpl');
-  $(nm+'Empty').hidden=list.length>0;grid.innerHTML='';
-  list.forEach(function(it){
-    var n=tpl.content.cloneNode(true);
-    var fotos=it.fotos||(it.imatge?[[it.imatge,it.titol]]:[]);
-    n.querySelectorAll('[data-f]').forEach(function(e){
-      var k=e.getAttribute('data-f');
-      if(k==='imatge'){e.src=fotos[0]?fotos[0][0]:'';e.alt=it.titol||''}
-      else if(k==='nfotos'){e.textContent=fotos.length>1?fotos.length+' fotos':'';e.hidden=fotos.length<2}
-      else{e.textContent=it[k]||'';if(k==='etiqueta')e.hidden=!it[k]}
-    });
-    n.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){openIm(it)})});
-    n.querySelectorAll('[data-info]').forEach(function(a){a.addEventListener('click',function(){askInfo(it)})});
-    grid.appendChild(n);
-  });
-}
-var cur=null,idx=0,lastFocus=null;
-function askInfo(it){
-  closeIm();
-  var m=$('missatge');
-  if(m&&!m.value)m.value='Hola, voldria rebre més informació sobre: '+it.titol+(it.etiqueta?' · Residencial Salt III':'')+' ('+it.preu+').';
-  var s=$('servei');if(s)s.selectedIndex=0;
-}
-function show(i){
-  var f=cur.fotos;idx=(i+f.length)%f.length;
-  $('imMain').src=f[idx][0];$('imMain').alt=f[idx][1];$('imCaption').textContent=f[idx][1];
-  $('imCount').textContent=(idx+1)+' / '+f.length;
-  $('imThumbs').querySelectorAll('button').forEach(function(b,j){b.setAttribute('aria-current',j===idx)});
-  var tb=$('imThumbs').children[idx];if(tb)tb.scrollIntoView({block:'nearest',inline:'nearest'});
-  var nx=new Image();nx.src=f[(idx+1)%f.length][0];
-}
-function openIm(it){
-  cur=it;lastFocus=document.activeElement;
-  var f=it.fotos||[[it.imatge,it.titol]];cur.fotos=f;
-  $('imEtiqueta').textContent=it.etiqueta||'';$('imPreu').textContent=it.preu||'';$('imTitol').textContent=it.titol||'';
-  $('imPoblacio').textContent=it.poblacio||'';$('imDesc').textContent=it.descripcio||it.detalls||'';
-  var ul=$('imFitxa');ul.innerHTML='';
-  (it.fitxa||[]).forEach(function(r){var li=document.createElement('li');li.innerHTML='<span></span><span></span>';li.children[0].textContent=r[0];li.children[1].textContent=r[1];ul.appendChild(li)});
-  var th=$('imThumbs');th.innerHTML='';
-  f.forEach(function(p,j){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Foto '+(j+1)+': '+p[1]);b.innerHTML='<img alt="" loading="lazy">';b.firstChild.src=p[0];b.addEventListener('click',function(){show(j)});th.appendChild(b)});
-  $('imPrev').hidden=$('imNext').hidden=f.length<2;
-  $('imModal').hidden=false;document.body.style.overflow='hidden';show(0);$('imClose').focus();
-}
-function closeIm(){if($('imModal').hidden)return;$('imModal').hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
-$('imPrev').addEventListener('click',function(){show(idx-1)});
-$('imNext').addEventListener('click',function(){show(idx+1)});
-$('imClose').addEventListener('click',closeIm);
-$('imInfoBtn').addEventListener('click',function(){askInfo(cur)});
-$('imModal').addEventListener('click',function(e){if(e.target===this)closeIm()});
-document.addEventListener('keydown',function(e){if($('imModal').hidden)return;if(e.key==='Escape')closeIm();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
-var tx=null;$('imMain').addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
-$('imMain').addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>40)show(idx+(d<0?1:-1));tx=null});
 $('menuBtn').addEventListener('click',function(){setMenu($('menuPanel').hidden)});
 document.querySelectorAll('[data-close]').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
@@ -593,7 +404,11 @@ cf.addEventListener('submit',function(e){
     st.style.color='#B3261E';st.textContent='No s\'ha pogut enviar. Pot trucar-nos al 650 369 778 o escriure a boris-fab@fabimmo.com.';
   }).then(function(){sb.disabled=false;sb.style.opacity=''});
 });
-render('venda');render('lloguer');
+var IM=window.FAB.IMMOBLES,dg=$('destacatsGrid');
+IM.venda.concat(IM.lloguer).slice(0,3).forEach(function(it){dg.appendChild(window.FAB.card(it))});
+$('nVenda').textContent='('+IM.venda.length+')';$('nLloguer').textContent='('+IM.lloguer.length+')';
+var q=new URLSearchParams(location.search).get('interes');
+if(q){$('missatge').value=q;$('servei').selectedIndex=0;history.replaceState(null,'',location.pathname+'#contacte')}
 })();
 </script>
 </body>
