@@ -26,7 +26,8 @@ var L='immobles/loft-santa-coloma/';
 var IMMOBLES={venda:[
  {etiqueta:'LOFT REFORMAT',municipi:'Santa Coloma de Farners',titol:'Loft totalment reformat amb balcó',poblacio:'Santa Coloma de Farners (Girona)',preu:'87.000 €',
   detalls:'Estudi · 1 bany · 1a planta · Balcó',
-  descripcio:'Es comercialitza un loft a la primera planta (sense ascensor), al costat de l\'estació d\'autobusos i a pocs minuts dels centres esportius i de les escoles. És un estudi totalment reformat: espai obert i lluminós amb sortida a balcó, cuina equipada amb placa d\'inducció, forn i microones, bany amb plat de dutxa, armari encastat, aire condicionat i safareig. A més, tota la instal·lació elèctrica de la comunitat és nova.',
+  fotosReals:true,
+  descripcio:'Loft a la primera planta (sense ascensor), al costat de l\'estació d\'autobusos i a pocs minuts dels centres esportius i de les escoles. És un estudi totalment reformat: espai obert i lluminós amb sortida a balcó, cuina equipada amb placa d\'inducció, forn i microones, bany amb plat de dutxa, armari encastat, aire condicionat i safareig. A més, tota la instal·lació elèctrica de la comunitat és nova.',
   fitxa:[['Tipus','Loft / estudi'],['Planta','1a (sense ascensor)'],['Estat','Totalment reformat'],['Banys','1'],['Cuina','Equipada (inducció, forn i microones)'],['Climatització','Aire condicionat'],['Aigua calenta','Termo elèctric'],['Exterior','Balcó'],['Instal·lació elèctrica comunitat','Nova']],
   fotos:[[L+'sala-balco.jpg','Espai principal amb sortida al balcó'],[L+'sala-cuina.jpg','Espai obert amb cuina'],[L+'sala-passadis.jpg','Vista general del loft'],[L+'cuina.jpg','Cuina equipada'],[L+'cuina-2.jpg','Cuina i sortida al balcó'],[L+'cuina-armari.jpg','Cuina i armari encastat'],[L+'bany.jpg','Bany'],[L+'balco.jpg','Balcó'],[L+'balco-2.jpg','Balcó'],[L+'safareig.jpg','Safareig amb termo elèctric']]},
  pis({titol:'Planta baixa A amb pati de 112 m²',preu:'220.500 €',detalls:'3 hab. · 2 banys · 62,73 m² útils · Pati 112,84 m²',
@@ -84,7 +85,7 @@ var MODAL='<div id="imModal" hidden role="dialog" aria-modal="true" aria-labelle
  '<div id="imInfo"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px"><span id="imEtiqueta"></span>'+
  '<button type="button" id="imClose" aria-label="Tancar">×</button></div>'+
  '<span id="imPreu"></span><h3 id="imTitol"></h3><p id="imPoblacio"></p><p id="imDesc"></p><ul id="imFitxa"></ul>'+
- '<p style="font-size:13px;color:#7B88A8">Imatges orientatives, no contractuals.</p>'+
+ '<p id="imAvis" style="font-size:13px;color:#7B88A8">Imatges orientatives, no contractuals.</p>'+
  '<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><a href="index.html#contacte" id="imInfoBtn" class="im-btn">Demani informació</a>'+
  '<a href="tel:+34650369778" class="im-tel">Truqui al 650 369 778</a></div></div></div></div>';
 var cur=null,idx=0,lastFocus=null,ready=false;
@@ -117,6 +118,7 @@ function openIm(it){
   var th=$('imThumbs');th.innerHTML='';
   f.forEach(function(p,j){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Foto '+(j+1)+': '+p[1]);b.innerHTML='<img alt="" loading="lazy" src="'+esc(p[0])+'">';b.addEventListener('click',function(){show(j)});th.appendChild(b)});
   $('imPrev').hidden=$('imNext').hidden=f.length<2;
+  $('imAvis').hidden=!!it.fotosReals;
   $('imModal').hidden=false;document.body.style.overflow='hidden';show(0);$('imClose').focus();
 }
 function closeIm(){if(!ready||$('imModal').hidden)return;$('imModal').hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
