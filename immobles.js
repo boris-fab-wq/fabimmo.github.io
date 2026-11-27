@@ -4,7 +4,7 @@
 // La primera foto és la portada (diferent a cada anunci); la segona, el plànol del pis.
 var D='immobles/salt-iii/';
 var ADR='Salt (Girona)';
-var EDIF=' Edifici de reforma integral amb ascensor, a 9 minuts en cotxe del centre de Girona i a 3 minuts de l\'AP-7 i l\'A-2.';
+var EDIF=' Es ven sobre plànol. Edifici de reforma integral amb ascensor, a 9 minuts en cotxe del centre de Girona i a 3 minuts de l\'AP-7 i l\'A-2.';
 var F={
  facDia:[D+'facana-dia.jpg','Façana de l\'edifici'],facNit:[D+'facana-nit.jpg','Façana al vespre'],
  salo:[D+'salo-menjador.jpg','Saló-menjador'],cuina:[D+'cuina.jpg','Cuina'],dorm:[D+'dormitori.jpg','Dormitori'],
@@ -14,7 +14,7 @@ var F={
 function pis(o){
   var g=[o.portada,o.planol].concat(o.extra||[]);
   [F.salo,F.cuina,F.dorm,F.facDia].forEach(function(f){if(g.indexOf(f)<0)g.push(f)});
-  return {etiqueta:'RESIDENCIAL SALT III',promocio:'Residencial Salt III',municipi:'Salt',titol:o.titol,poblacio:ADR,preu:o.preu,detalls:o.detalls,descripcio:o.desc+EDIF,fitxa:o.fitxa,fotos:g};
+  return {etiqueta:'RESIDENCIAL SALT III',estat:'Sobre plànol',promocio:'Residencial Salt III',municipi:'Salt',titol:o.titol,poblacio:ADR,preu:o.preu,detalls:o.detalls,descripcio:o.desc+EDIF,fitxa:o.fitxa,fotos:g};
 }
 var tA=[D+'tipus-a-planol.jpg','Plànol de l\'habitatge A (plantes 1a a 3a)'],t3A=[D+'tipus-a-3d.jpg','Vista 3D de l\'habitatge A'];
 var tB=[D+'tipus-b-planol.jpg','Plànol de l\'habitatge B (plantes 1a a 3a)'],t3B=[D+'tipus-b-3d.jpg','Vista 3D de l\'habitatge B'];
@@ -47,7 +47,7 @@ var IMMOBLES={venda:[
   desc:'Es comercialitza el dúplex àtic 4t B de Residencial Salt III: 85,68 m² útils en dues plantes (altell de 22,01 m² útils inclòs), 2 dormitoris, 2 banys i una terrassa de 39,24 m².',
   fitxa:[['Planta','4a + altell'],['Superfície útil total','85,68 m²'],['Altell (útil)','22,01 m²'],['Altell (construït)','32,36 m²'],['Dormitoris','2'],['Banys','2'],['Terrassa','39,24 m²']],
   portada:F.seccio,planol:[D+'4b-planol.jpg','Plànol de la planta 4a (dúplex 4t B)'],extra:[[D+'4b-altell.jpg','Plànol de l\'altell (dúplex 4t B)'],[D+'4b-3d.jpg','Vista 3D del dúplex 4t B'],F.atic]}),
- {etiqueta:'RESIDENCIAL SALT III',promocio:'Residencial Salt III',municipi:'Salt',titol:'Local comercial a peu de carrer',poblacio:ADR,preu:'63.000 €',detalls:'Planta baixa · 20 m² construïts',
+ {etiqueta:'RESIDENCIAL SALT III',estat:'Sobre plànol',promocio:'Residencial Salt III',municipi:'Salt',titol:'Local comercial a peu de carrer',poblacio:ADR,preu:'63.000 €',detalls:'Planta baixa · 20 m² construïts',
   descripcio:'Es comercialitza el local comercial de planta baixa de Residencial Salt III: 20 m² construïts a peu de carrer.'+EDIF,
   fitxa:[['Planta','Baixa'],['Superfície construïda','20 m²']],fotos:[F.facNit,F.facDia]}
 ],lloguer:[]};
@@ -67,7 +67,7 @@ function card(it){
   a.className='im-card';
   a.innerHTML='<button type="button" data-open class="im-photo" aria-label="Veure fotos: '+esc(it.titol)+'">'+
     '<img src="'+esc(f[0]?f[0][0]:'')+'" alt="'+esc(it.titol)+'" loading="lazy">'+
-    (it.etiqueta?'<span class="im-tag">'+esc(it.etiqueta)+'</span>':'')+
+    (it.etiqueta?'<span class="im-tag">'+esc(it.etiqueta)+'</span>':'')+(it.estat?'<span class="im-estat">'+esc(it.estat)+'</span>':'')+
     (f.length>1?'<span class="im-n">'+f.length+' fotos</span>':'')+'</button>'+
     '<div class="im-body"><span class="im-preu">'+esc(it.preu)+'</span><h3>'+esc(it.titol)+'</h3>'+
     '<p>'+esc(it.poblacio)+'</p><p>'+esc(it.detalls)+'</p>'+
@@ -110,7 +110,7 @@ function show(i){
 }
 function openIm(it){
   setup();cur=it;lastFocus=document.activeElement;var f=fotos(it);
-  $('imEtiqueta').textContent=it.etiqueta||'';$('imPreu').textContent=it.preu||'';$('imTitol').textContent=it.titol||'';
+  $('imEtiqueta').textContent=[it.etiqueta,it.estat&&it.estat.toUpperCase()].filter(Boolean).join(' · ');$('imPreu').textContent=it.preu||'';$('imTitol').textContent=it.titol||'';
   $('imPoblacio').textContent=it.poblacio||'';$('imDesc').textContent=it.descripcio||it.detalls||'';
   var ul=$('imFitxa');ul.innerHTML='';
   (it.fitxa||[]).forEach(function(r){var li=document.createElement('li');li.innerHTML='<span>'+esc(r[0])+'</span><span>'+esc(r[1])+'</span>';ul.appendChild(li)});
